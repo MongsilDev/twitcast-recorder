@@ -32,7 +32,7 @@ while true; do
   pwhash="$(echo -n "${2}" | md5sum - | cut -d ' ' -f 1 )"
 
   echo "$LOG_PREFIX Start recording, stream saved to \"$FNAME\"."
-  echo "$LOG_PREFIX Use command \"tail -f $FNAME.log\" to track recording progress."
+  echo "$LOG_PREFIX Use command \"tail -f log/$FNAME.log\" to track recording progress."
 
   # Also record low resolution stream simultaneously as backup
   M3U8_URL="http://twitcasting.tv/$1/metastream.m3u8?video=1"
